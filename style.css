@@ -1,0 +1,36 @@
+:root {
+    --color-oscuro: #2A4D88;
+    --color-claro: #D9D9D8;
+    --color-medio: #B1BBC8;
+    --color-detalles: #7C94B8;
+}
+
+body {
+    background-color: var(--color-medio);
+}
+
+.reseñas-contenedor {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.reseña {
+    width: 180px;
+    height: fit-content;
+    background-color: var(--color-claro);
+    border-radius: 10px;
+
+    margin: 10px;
+    padding: 10px;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pfp {
+    border-radius: 50%;
+    margin: 10px;
+}
