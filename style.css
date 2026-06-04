@@ -9,15 +9,60 @@ body {
     background-color: var(--color-medio);
 }
 
+.textimg {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-title {
+    color: var(--color-oscuro);
+}
+
+.col-md-4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background-color: var(--color-claro);
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.btn-comprar {
+  padding: 14px 28px;
+  margin: 10px;
+  letter-spacing: 0.5px;
+  color: var(--color-claro);
+  background-color: var(--color-oscuro);
+  
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px grey;
+}
+
+.btn-comprar:hover {
+  background-color: var(--color-detalles);
+}
+
 .reseñas-contenedor {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
 }
 
 .reseña {
     width: 180px;
-    height: fit-content;
+    height: 355px;
     background-color: var(--color-claro);
     border-radius: 10px;
 
@@ -33,4 +78,8 @@ body {
 .pfp {
     border-radius: 50%;
     margin: 10px;
+}
+
+.nomreseñas {
+    color: var(--color-oscuro);
 }
