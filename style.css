@@ -36,6 +36,17 @@ body {
     transform: scale(1.05);
 }
 
+.codigo {
+    width: fit-content;
+    height: 200px;
+    background-color: var(--color-claro);
+    border-radius: 10px; 
+}
+
+
+
+
+
 .btn-comprar {
   padding: 14px 28px;
   margin: 10px;
