@@ -9,6 +9,8 @@ body {
     background-color: var(--color-medio);
 }
 
+
+
 .textimg {
     display: flex;
     flex-wrap: wrap;
@@ -17,6 +19,8 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+
 
 .card-title {
     color: var(--color-oscuro);
@@ -32,20 +36,24 @@ body {
     background-color: var(--color-claro);
 }
 
-.card:hover {
+.card-sillas:hover {
     transform: scale(1.05);
 }
 
-.codigo {
-    width: fit-content;
-    height: 200px;
-    background-color: var(--color-claro);
-    border-radius: 10px; 
+
+
+.codigo-caja {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-
-
-
+.col-md-8 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .btn-comprar {
   padding: 14px 28px;
@@ -63,6 +71,8 @@ body {
 .btn-comprar:hover {
   background-color: var(--color-detalles);
 }
+
+
 
 .reseñas-contenedor {
     display: flex;
