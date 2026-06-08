@@ -164,15 +164,56 @@
         </div>
     </div>
 
+    <!--PUMPUTIS EDITA LOS LINKS DEL NAVBAR PORFA GRACIAS-->
     <!--NAVBAR-->
     <nav class="navbar-custom">
         <span class="navbar-titulo">SillasPro</span>
         <div class="navbar-botones">
-            <a href="#" class="btn-nav">Home</a>
-            <a href="#reseñas" class="btn-nav">Reseñas</a>
+            <!-- Menú desplegable -->
+            <div class="navbar-dropdown">
+                <button class="btn-nav btn-menu" id="menuToggle" aria-expanded="false" aria-haspopup="true">
+                    Menú ▾
+                </button>
+                <ul class="dropdown-lista" id="dropdownMenu" role="menu">
+                    <li><a href="#inicio" class="dropdown-item" role="menuitem">🏠 Inicio</a></li>
+                    <li><a href="#productos" class="dropdown-item" role="menuitem">🪑 Productos</a></li>
+                    <li><a href="#reseñas" class="dropdown-item" role="menuitem">⭐ Reseñas</a></li>
+                    <li><a href="#contacto" class="dropdown-item" role="menuitem">📬 Contacto</a></li>
+                    <li><a href="#nosotros" class="dropdown-item" role="menuitem">👥 Nosotros</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
 
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const dropdownMenu = document.getElementById('dropdownMenu');
+
+        menuToggle.addEventListener('click', () => {
+            const abierto = dropdownMenu.classList.toggle('abierto');
+            menuToggle.setAttribute('aria-expanded', abierto);
+            // Cambia la flecha según el estado
+            menuToggle.textContent = abierto ? 'Menú ▴' : 'Menú ▾';
+        });
+
+        // Cerrar al hacer click fuera del menú
+        document.addEventListener('click', (e) => {
+            if (!menuToggle.contains(e.target) && !dropdownMenu.contains(e.target)) {
+                dropdownMenu.classList.remove('abierto');
+                menuToggle.setAttribute('aria-expanded', false);
+                menuToggle.textContent = 'Menú ▾';
+            }
+        });
+
+        // Cerrar al seleccionar un ítem
+        dropdownMenu.querySelectorAll('.dropdown-item').forEach(item => {
+            item.addEventListener('click', () => {
+                dropdownMenu.classList.remove('abierto');
+                menuToggle.setAttribute('aria-expanded', false);
+                menuToggle.textContent = 'Menú ▾';
+            });
+        });
+    </script>
 </body>
 
 </html>
