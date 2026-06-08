@@ -6,8 +6,12 @@
 }
 
 body {
-    background-color: var(--color-medio);
     padding-top: 100px;
+    background-color: var(--color-medio);
+}
+
+.row g-0{
+    width: 7081px;
 }
 
 .textimg {
@@ -35,12 +39,6 @@ body {
     background-color: var(--color-claro);
 }
 
-.card-sillas:hover {
-    transform: scale(1.05);
-}
-
-
-
 .codigo-caja {
     width: 100%;
     display: flex;
@@ -48,27 +46,89 @@ body {
     align-items: center;
 }
 
+.row g-0{
+    display: flex;
+    flex-direction: row;
+}
+
 .col-md-8 {
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
+.btn-comprar-123{
+    
+    padding: 14px 0;
+    margin: 10px;
+    margin-left: 70px;
+    margin-right: 70px;
+    letter-spacing: 0.5px;
+    color: var(--color-claro);
+    background-color: var(--color-oscuro);
+    
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px grey;
+
+}
+
+.btn-comprar-123:hover{
+    transform: scale(1.1);
+}
+
+.comprarbtn{
+    width: 175px;
+    padding: 14px 0;
+    margin: 10px;
+    margin-top: 20px;
+    margin-left: 30px;
+    
+    letter-spacing: 0.5px;
+    color: var(--color-claro);
+    background-color: var(--color-oscuro);
+    
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px grey;
+}
+
+.ancho{
+    display: flex;
+    justify-self: center ;
+
+    height: 10px;
+    width: 581px;
+} 
+
+.comprarbtn:hover{
+    transform: scale(1.1);
+}
+
+.card-body{
+    padding-bottom: 0;
+}
+
+
 .btn-comprar {
-  padding: 14px 28px;
-  margin: 10px;
-  letter-spacing: 0.5px;
-  color: var(--color-claro);
-  background-color: var(--color-oscuro);
-  
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  box-shadow: 0 4px 15px grey;
+    padding: 14px 28px;
+    margin: 10px;
+    margin-left: 0;
+    letter-spacing: 0.5px;
+    color: var(--color-claro);
+    background-color: var(--color-oscuro);
+    
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px grey;
 }
 
 .btn-comprar:hover {
-  background-color: var(--color-detalles);
+    background-color: var(--color-detalles);
 }
 
 
@@ -95,12 +155,66 @@ body {
     align-items: center;
 }
 
-.reseña p{
+.ventajas-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.card1{
+    background-color: #D9D9D8;
+    width: 581px;
+    height: 300px;
     
 }
 
+.ordenar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ordenar img{
+    width: 150px;
+}
+
+.silla111{
+    display: flex;
+    width: 100px;
+    justify-content: right;
+    height: 100px;
+}
+
+#flechaaa{
+    width: 100px;
+    height: 100px;
+}
+
+.ventajas {
+    width: 180px;
+    height: 334px;
+    background-color: var(--color-claro);
+    border-radius: 10px;
+
+    margin: 10px;
+    padding: 10px;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
 .pfp {
     border-radius: 50%;
+    margin: 10px;
+}
+
+.ven{
+    border-radius: 10%;
     margin: 10px;
 }
 
@@ -108,8 +222,119 @@ body {
     color: var(--color-oscuro);
 }
 
+#footer {
+    height: 100px;
+    background-color: var(--color-oscuro);
+}
+
+#footer p{
+    margin: 0 auto;
+    padding-bottom: 0;
+    padding-top: 10px;
+    text-align: center;
+    color: var(--color-claro);
+}
+
+
+
+
+
+.carousel{
+    margin-bottom: 25px;
+    display: flex;
+    justify-self: center;
+    width:581px;
+    height:400px;
+    overflow:hidden;
+    position:relative;
+    border-radius:15px;
+}
+
+.slides{
+    display:flex;
+    width:100%;
+    height:100%;
+    transition:transform .5s ease;
+}
+
+.slide{
+    min-width:100%;
+    height:100%;
+}
+
+.slide img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.btn{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    background:rgba(0,0,0,.5);
+    color:white;
+    border:none;
+    font-size:24px;
+    padding:10px 15px;
+    cursor:pointer;
+    z-index:10;
+}
+
+.prev{
+    left:10px;
+}
+
+.next{
+    right:10px;
+}
+
+
+
+
+.faq{
+    max-width: 600px;
+    margin: 80px auto;
+    padding: 20px;
+}
+
+.faq h2{
+    
+    text-align: center;
+    margin-bottom: 30px;
+    background-color: var(--color-detalles);
+}
+
+.faq-item{
+    margin-bottom: 15px;
+}
+
+.faq-question{
+    width: 100%;
+    padding: 18px;
+    font-size: 18px;
+    text-align: left;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.faq-answer{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    padding: 0 18px;
+    background-color: var(--color-detalles);
+    border-radius: 8px;
+}
+
+.faq-answer p{
+    padding: 15px 0;
+}
+
 /* NAVBAR */
 .navbar-custom {
+    z-index: 1000;
     position: fixed;
     top: 0;
     left: 0;
@@ -203,11 +428,167 @@ body {
     padding-left: 24px;
 }
 
+.loqueyoquiera {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.loqueyoquiera.show {
+    opacity: 1;
+    transform: translateY(0);
+}  
+
+section {
+    scroll-margin-top: 80px; 
+}
+
+div {
+    scroll-margin-top: 80px; 
+}
 
 
+/* TABLET (768px o menos) */
+@media (max-width: 768px) {
 
-/* cacota page*/
-/*RESPONSIVE*/
-@media screen {
-    
+    body {
+        padding-top: 80px;
+    }
+
+    /* Navbar */
+    .navbar-titulo {
+        font-size: 1rem;
+    }
+
+    /* Contador */
+    .card1 {
+        width: 100%;
+        height: auto;
+    }
+
+    .ordenar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ordenar img {
+        width: 100px;
+    }
+
+    /* Carrusel */
+    .carousel {
+        width: 100%;
+        height: 280px;
+    }
+
+    /* Cards de sillas */
+    .card.mb-3 {
+        max-width: 100% !important;
+    }
+
+    .card-sillas .row {
+        flex-direction: column;
+    }
+
+    .card-sillas .col-md-4,
+    .card-sillas .col-md-8 {
+        width: 100%;
+    }
+
+    .btn-comprar-123 {
+        margin-left: 20px;
+        margin-right: 20px;
+        width: calc(100% - 40px);
+    }
+
+    /* Código de descuento */
+    .codigo-caja .card.mb-3 {
+        max-width: 100% !important;
+    }
+
+    .codigo-caja .row {
+        flex-direction: column;
+    }
+
+    .codigo-caja .col-md-4,
+    .codigo-caja .col-md-8 {
+        width: 100%;
+    }
+
+.reseña {
+        width: 85%;
+        height: auto;
+        flex-direction: column;  /* ← esto acomoda el texto abajo */
+    }
+
+.ventajas {
+        width: 85%;
+        height: auto;
+        flex-direction: column;  /* ← esto acomoda el texto abajo */
+    }
+
+    /* FAQ */
+    .faq {
+        margin: 40px auto;
+        padding: 10px;
+    }
+
+    .faq-question {
+        font-size: 15px;
+        padding: 14px;
+    }
+}
+
+/* MÓVIL (480px o menos) */
+@media (max-width: 480px) {
+
+    /* Contador */
+    .display-4 {
+        font-size: 1.8rem;
+    }
+
+    /* Carrusel */
+    .carousel {
+        height: 220px;
+    }
+
+    /* Ventajas y reseñas: una por fila */
+    .ventajas-contenedor,
+    .reseñas-contenedor {
+        flex-direction: column;
+        align-items: center;
+    }
+
+.reseña {
+        width: 85%;
+        height: auto;
+        flex-direction: column;  /* ← esto acomoda el texto abajo */
+    }
+
+.ventajas {
+        width: 85%;
+        height: auto;
+        flex-direction: column;  /* ← esto acomoda el texto abajo */
+    }
+
+    /* Código de descuento */
+    .codigo-caja .col-md-4 {
+        display: none; /* Oculta la imagen del % en móvil muy chico */
+    }
+
+    /* FAQ */
+    .faq {
+        margin: 20px auto;
+    }
+
+    .faq-question {
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    /* Footer */
+    #footer {
+        height: auto;
+        padding: 15px 0;
+    }
 }

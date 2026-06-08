@@ -12,6 +12,8 @@
 
     <!--CSS-->
     <link rel="stylesheet" href="style.css">
+
+    <link rel="icon" type="image/x-icon" href="multimedia/logo.jpeg">
 </head>
 
 <body>
@@ -21,11 +23,161 @@
         crossorigin="anonymous"></script>
 
 
+<!--PUMPUTIS EDITA LOS LINKS DEL NAVBAR PORFA GRACIAS-->
+    <!--NAVBAR-->
+    <nav class="navbar-custom">
+        <span class="navbar-titulo">SillasPro</span>
+        <div class="navbar-botones">
+            <!-- Menú desplegable -->
+            <div class="navbar-dropdown">
+                <button class="btn-nav btn-menu" id="menuToggle" aria-expanded="false" aria-haspopup="true">
+                    Menú ▾
+                </button>
+                <ul class="dropdown-lista" id="dropdownMenu" role="menu">
+                    <li><a href="#" class="dropdown-item" role="menuitem">🏠 Inicio</a></li>
+                    <li><a href="#ventajas" class="dropdown-item" role="menuitem">🚀Ventajas</a></li>
+                    <li><a href="#sillaaa" class="dropdown-item" role="menuitem">🪑 Productos</a></li>
+                    <li><a href="#reseña" class="dropdown-item" role="menuitem">⭐ Reseñas</a></li>
+                    <li><a href="#Preguntas" class="dropdown-item" role="menuitem">👥 Preguntas</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
 
 
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card1">
+                <div class="card-header bg-primary text-white">
+                    <h4 class="mb-0 text-center">EN OFERTA POR TIEMPO LIMITADO</h4>
+                </div>
+                <div class="card-body">
+                    <div class="row text-center">
+                        <div class="col-3">
+                            <h3 id="days" class="display-4">00</h3>
+                            <p>Days</p>
+                        </div>
+                        <div class="col-3">
+                            <h3 id="hours" class="display-4">00</h3>
+                            <p>Hours</p>
+                        </div>
+                        <div class="col-3">
+                            <h3 id="minutes" class="display-4">00</h3>
+                            <p>Minutes</p>
+                        </div>
+                        <div class="col-3">
+                            <h3 id="seconds" class="display-4">00</h3>
+                            <p>Seconds</p>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                    <div class="ordenar">
+                <button class="comprarbtn" onclick="location.href='#sillaaa'">
+                    
+                    ¡CONSIGUELA YA!
+                </button>
+                <img src="multimedia/flecha.png" id="flechaaa">
+                <img src="multimedia/silla1.png" >
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Set the date we're counting down to (1 month from now)
+const countDownDate = new Date().getTime() + (1 * 5 * 60 * 60 * 1000);
+
+// Update the countdown every 1 second
+const x = setInterval(function() {
+  // Get today's date and time
+    const now = new Date().getTime();
+
+  // Find the distance between now and the countdown date
+    const distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result
+    document.getElementById("days").innerHTML = days.toString().padStart(2, '0');
+    document.getElementById("hours").innerHTML = hours.toString().padStart(2, '0');
+    document.getElementById("minutes").innerHTML = minutes.toString().padStart(2, '0');
+    document.getElementById("seconds").innerHTML = seconds.toString().padStart(2, '0');
+
+  // If the countdown is finished, write some text
+    if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("days").innerHTML = "00";
+    document.getElementById("hours").innerHTML = "00";
+    document.getElementById("minutes").innerHTML = "00";
+    document.getElementById("seconds").innerHTML = "00";
+    }
+}, 1000);
+</script>
+
+<div class="loqueyoquiera">
+<div class="ventajas-contenedor" id="ventajas">
+
+        <div class="ventajas">
+            <img class="ven" src="multimedia/ventaja1.webp" alt="ventajas 1" width="100px">
+            <h6 class="nomreseñas">Cuida tu Postura</h6>
+            <p>Diseñadas ergonomicamente para alinear tu columna y eliminar los dolores al final del dia</p>
+        </div>
+    
+    
+        <div class="ventajas">
+            <img class="ven" src="multimedia/ventaja2.webp" alt="ventajas 1" width="100px">
+            <h6 class="nomreseñas">Materiales Premium</h6>
+            <p>Estructuras reforzadas y mallas de alta resistencia que no se vencen con el uso diario</p>
+        </div>
+    
+    
+        <div class="ventajas">
+            <img class="ven" src="multimedia/ventaja3.webp" alt="ventajas 1" width="100px">
+            <h6 class="nomreseñas">Armado en minutos</h6>
+            <p>Incluye todas las herramientas y un manual super facil para que la tengas lista sin vueltas</p>
+        </div>
+    
+</div>
+</div>
+
+
+<div class="loqueyoquiera">
+    <div class="carousel">
+    <div class="slides">
+        <div class="slide">
+            <img src="multimedia/carusel1.webp" >
+        </div>
+
+        <div class="slide">
+            <img src="multimedia/carusel2.jpg" >
+        </div>
+
+        <div class="slide">
+            <img src="multimedia/carusel3.jpg" >
+        </div>
+    </div>
+
+    <button class="btn prev">❮</button>
+    <button class="btn next">❯</button>
+</div>
+</div>
+
+
+
+<div  class="loqueyoquiera">
     <!--TEXTO + IMG-->
-    <div class="textimg">
+    <div class="textimg" id="sillaaa">
         <div class="card-sillas">
             <div class="card mb-3" style="max-width: 581px;">
                 <div class="row g-0">
@@ -47,14 +199,16 @@
 
                     </div>
                 </div>
-                <button class="btn-comprar">
+                <button class="btn-comprar-123">
                     ¡CONSIGUELA YA!
                 </button>
             </div>
         </div>
-
     </div>
+</div>
 
+
+<div class="loqueyoquiera">
     <!--COSO CON EL CÓDIGO-->
     <div class="codigo-caja">
         <div class="col-md-8">
@@ -83,10 +237,12 @@
             </div>
         </div>
     </div>
+</div>
 
 
+<div class="loqueyoquiera">
     <!--RESEÑAS-->
-    <div id="reseñas" class="reseñas-contenedor">
+    <div class="reseñas-contenedor" id="reseña">
         <div class="reseña">
             <img class="pfp" src="multimedia/wachin1.jpg" alt="Reseña 1" width="100px">
             <h6 class="nomreseñas">Valentín Carrazcal</h6>
@@ -110,30 +266,106 @@
             <img class="estrellas" src="multimedia/5estrellas.png" alt="estrellas" width="100px">
         </div>
     </div>
+</div>
 
-    <!--PUMPUTIS EDITA LOS LINKS DEL NAVBAR PORFA GRACIAS-->
-    <!--NAVBAR-->
-    <nav class="navbar-custom">
-        <span class="navbar-titulo">SillasPro</span>
-        <div class="navbar-botones">
-            <!-- Menú desplegable -->
-            <div class="navbar-dropdown">
-                <button class="btn-nav btn-menu" id="menuToggle" aria-expanded="false" aria-haspopup="true">
-                    Menú ▾
-                </button>
-                <ul class="dropdown-lista" id="dropdownMenu" role="menu">
-                    <li><a href="#inicio" class="dropdown-item" role="menuitem">🏠 Inicio</a></li>
-                    <li><a href="#productos" class="dropdown-item" role="menuitem">🪑 Productos</a></li>
-                    <li><a href="#reseñas" class="dropdown-item" role="menuitem">⭐ Reseñas</a></li>
-                    <li><a href="#contacto" class="dropdown-item" role="menuitem">📬 Contacto</a></li>
-                    <li><a href="#nosotros" class="dropdown-item" role="menuitem">👥 Nosotros</a></li>
-                </ul>
-            </div>
+
+<div class="loqueyoquiera">
+    <section class="faq" id="Preguntas">
+    <h2>Preguntas Frecuentes</h2>
+
+    <div class="faq-item">
+        <button class="faq-question">
+            ¿Las sillas ayudan a mejorar la postura?
+        </button>
+        <div class="faq-answer">
+            <p>Sí. Nuestras sillas están diseñadas para mantener una postura correcta y reducir la tensión en la espalda y el cuello.</p>
         </div>
-    </nav>
+    </div>
 
-    <script>
-        const menuToggle = document.getElementById('menuToggle');
+    <div class="faq-item">
+        <button class="faq-question">
+            ¿Son ajustables?
+        </button>
+        <div class="faq-answer">
+            <p>La mayoría de nuestros modelos permiten ajustar altura, respaldo, apoyabrazos y soporte lumbar para adaptarse a cada usuario.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question">
+            ¿Cuánto tiempo dura la garantía?
+        </button>
+        <div class="faq-answer">
+            <p>Ofrecemos garantía de hasta 3 años contra defectos de fabricación, dependiendo del modelo adquirido.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question">
+            ¿Realizan envíos a todo el país?
+        </button>
+        <div class="faq-answer">
+            <p>Sí, contamos con envíos seguros y rápidos a todo el territorio nacional.</p>
+        </div>
+    </div>
+</section>
+</div>
+
+
+
+
+
+    <div id="footer">
+        <p>© Landing Page</p>
+        <p>Contiene HTML, CSS y JavaScript</p>
+    </div>
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    const slides = document.querySelector(".slides");
+    const totalSlides = document.querySelectorAll(".slide").length;
+
+    let index = 0;
+
+    function updateCarousel() {
+        slides.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    document.querySelector(".next").addEventListener("click", () => {
+        index = (index + 1) % totalSlides;
+        updateCarousel();
+    });
+
+    document.querySelector(".prev").addEventListener("click", () => {
+        index = (index - 1 + totalSlides) % totalSlides;
+        updateCarousel();
+    });
+
+});
+
+
+
+
+const questions = document.querySelectorAll(".faq-question");
+
+questions.forEach(question => {
+    question.addEventListener("click", () => {
+        const answer = question.nextElementSibling;
+
+        if(answer.style.maxHeight){
+            answer.style.maxHeight = null;
+        } else {
+            answer.style.maxHeight = answer.scrollHeight + "px";
+        }
+    });
+});
+
+
+
+    const menuToggle = document.getElementById('menuToggle');
         const dropdownMenu = document.getElementById('dropdownMenu');
 
         menuToggle.addEventListener('click', () => {
@@ -160,7 +392,18 @@
                 menuToggle.textContent = 'Menú ▾';
             });
         });
-    </script>
+
+
+const elements = document.querySelectorAll('.loqueyoquiera');
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+    if (entry.isIntersecting) {
+    entry.target.classList.add('show');
+    }
+    });
+});
+elements.forEach(element => observer.observe(element));
+</script>
 </body>
 
 </html>
