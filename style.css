@@ -104,3 +104,46 @@ body {
 .nomreseñas {
     color: var(--color-oscuro);
 }
+
+/* NAVBAR */
+.navbar-custom {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-oscuro);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 24px;
+    box-shadow: 0 -4px 15px grey;
+}
+
+.navbar-titulo {
+    color: var(--color-claro);
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.navbar-botones {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-nav {
+    padding: 8px 20px;
+    color: var(--color-claro);
+    background-color: transparent;
+    border: 2px solid var(--color-claro);
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.btn-nav:hover {
+    background-color: var(--color-detalles);
+    color: var(--color-claro);
+    border-color: var(--color-detalles);
+}
