@@ -9,8 +9,6 @@ body {
     background-color: var(--color-medio);
 }
 
-
-
 .textimg {
     display: flex;
     flex-wrap: wrap;
@@ -146,4 +144,14 @@ body {
     background-color: var(--color-detalles);
     color: var(--color-claro);
     border-color: var(--color-detalles);
+}
+
+
+
+
+
+
+/*RESPONSIVE*/
+@media screen {
+    
 }
