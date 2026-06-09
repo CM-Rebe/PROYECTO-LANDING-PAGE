@@ -22,8 +22,6 @@
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
 
-
-<!--PUMPUTIS EDITA LOS LINKS DEL NAVBAR PORFA GRACIAS-->
     <!--NAVBAR-->
     <nav class="navbar-custom">
         <span class="navbar-titulo">SillasPro</span>
@@ -34,11 +32,11 @@
                     Menú ▾
                 </button>
                 <ul class="dropdown-lista" id="dropdownMenu" role="menu">
-                    <li><a href="#" class="dropdown-item" role="menuitem">🏠 Inicio</a></li>
-                    <li><a href="#ventajas" class="dropdown-item" role="menuitem">🚀Ventajas</a></li>
-                    <li><a href="#sillaaa" class="dropdown-item" role="menuitem">🪑 Productos</a></li>
-                    <li><a href="#reseña" class="dropdown-item" role="menuitem">⭐ Reseñas</a></li>
-                    <li><a href="#Preguntas" class="dropdown-item" role="menuitem">👥 Preguntas</a></li>
+                    <li><a href="#" class="dropdown-item" role="menuitem">Inicio</a></li>
+                    <li><a href="#ventajas" class="dropdown-item" role="menuitem">Ventajas</a></li>
+                    <li><a href="#sillaaa" class="dropdown-item" role="menuitem">Productos</a></li>
+                    <li><a href="#reseña" class="dropdown-item" role="menuitem">Reseñas</a></li>
+                    <li><a href="#Preguntas" class="dropdown-item" role="menuitem">Preguntas</a></li>
                 </ul>
             </div>
         </div>
@@ -47,269 +45,246 @@
 
 
 
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card1">
-                <div class="card-header bg-primary text-white">
-                    <h4 class="mb-0 text-center">EN OFERTA POR TIEMPO LIMITADO</h4>
-                </div>
-                <div class="card-body">
-                    <div class="row text-center">
-                        <div class="col-3">
-                            <h3 id="days" class="display-4">00</h3>
-                            <p>Days</p>
-                        </div>
-                        <div class="col-3">
-                            <h3 id="hours" class="display-4">00</h3>
-                            <p>Hours</p>
-                        </div>
-                        <div class="col-3">
-                            <h3 id="minutes" class="display-4">00</h3>
-                            <p>Minutes</p>
-                        </div>
-                        <div class="col-3">
-                            <h3 id="seconds" class="display-4">00</h3>
-                            <p>Seconds</p>
-                        </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card1">
+                    <div class="card-header bg-primary text-white">
+                        <h4 class="mb-0 text-center">EN OFERTA POR TIEMPO LIMITADO</h4>
                     </div>
-                    
-                </div>
+                    <div class="card-body">
+                        <div class="row text-center">
+                            <div class="col-3">
+                                <h3 id="days" class="display-4">00</h3>
+                                <p>Days</p>
+                            </div>
+                            <div class="col-3">
+                                <h3 id="hours" class="display-4">00</h3>
+                                <p>Hours</p>
+                            </div>
+                            <div class="col-3">
+                                <h3 id="minutes" class="display-4">00</h3>
+                                <p>Minutes</p>
+                            </div>
+                            <div class="col-3">
+                                <h3 id="seconds" class="display-4">00</h3>
+                                <p>Seconds</p>
+                            </div>
+                        </div>
+
+                    </div>
 
                     <div class="ordenar">
-                <button class="comprarbtn" onclick="location.href='#sillaaa'">
-                    
-                    ¡CONSIGUELA YA!
-                </button>
-                <img src="multimedia/flecha.png" id="flechaaa">
-                <img src="multimedia/silla1.png" >
-                </div>
+                        <!-- data-producto define qué nombre aparece en el pop-up de compra -->
+                        <button class="btn-comprar-123" data-producto="Cronos Comfort">
+                            ¡CONSIGUELA YA!
+                        </button>
+                        <img src="multimedia/flecha.png" id="flechaaa">
+                        <img src="multimedia/silla1.png">
+                    </div>
 
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-<script>
-    // Set the date we're counting down to (1 month from now)
-const countDownDate = new Date().getTime() + (1 * 5 * 60 * 60 * 1000);
+    <script>
+        // Set the date we're counting down to (1 month from now)
+        const countDownDate = new Date().getTime() + (1 * 5 * 60 * 60 * 1000);
 
-// Update the countdown every 1 second
-const x = setInterval(function() {
-  // Get today's date and time
-    const now = new Date().getTime();
+        // Update the countdown every 1 second
+        const x = setInterval(function () {
+            // Get today's date and time
+            const now = new Date().getTime();
 
-  // Find the distance between now and the countdown date
-    const distance = countDownDate - now;
+            // Find the distance between now and the countdown date
+            const distance = countDownDate - now;
 
-  // Time calculations for days, hours, minutes and seconds
-  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            // Time calculations for days, hours, minutes and seconds
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  // Display the result
-    document.getElementById("days").innerHTML = days.toString().padStart(2, '0');
-    document.getElementById("hours").innerHTML = hours.toString().padStart(2, '0');
-    document.getElementById("minutes").innerHTML = minutes.toString().padStart(2, '0');
-    document.getElementById("seconds").innerHTML = seconds.toString().padStart(2, '0');
+            // Display the result
+            document.getElementById("days").innerHTML = days.toString().padStart(2, '0');
+            document.getElementById("hours").innerHTML = hours.toString().padStart(2, '0');
+            document.getElementById("minutes").innerHTML = minutes.toString().padStart(2, '0');
+            document.getElementById("seconds").innerHTML = seconds.toString().padStart(2, '0');
 
-  // If the countdown is finished, write some text
-    if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("days").innerHTML = "00";
-    document.getElementById("hours").innerHTML = "00";
-    document.getElementById("minutes").innerHTML = "00";
-    document.getElementById("seconds").innerHTML = "00";
-    }
-}, 1000);
-</script>
+            // If the countdown is finished, write some text
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("days").innerHTML = "00";
+                document.getElementById("hours").innerHTML = "00";
+                document.getElementById("minutes").innerHTML = "00";
+                document.getElementById("seconds").innerHTML = "00";
+            }
+        }, 1000);
+    </script>
 
-<div class="loqueyoquiera">
-<div class="ventajas-contenedor" id="ventajas">
+    <div class="loqueyoquiera">
+        <div class="ventajas-contenedor" id="ventajas">
 
-        <div class="ventajas">
-            <img class="ven" src="multimedia/ventaja1.webp" alt="ventajas 1" width="100px">
-            <h6 class="nomreseñas">Cuida tu Postura</h6>
-            <p>Diseñadas ergonomicamente para alinear tu columna y eliminar los dolores al final del dia</p>
-        </div>
-    
-    
-        <div class="ventajas">
-            <img class="ven" src="multimedia/ventaja2.webp" alt="ventajas 1" width="100px">
-            <h6 class="nomreseñas">Materiales Premium</h6>
-            <p>Estructuras reforzadas y mallas de alta resistencia que no se vencen con el uso diario</p>
-        </div>
-    
-    
-        <div class="ventajas">
-            <img class="ven" src="multimedia/ventaja3.webp" alt="ventajas 1" width="100px">
-            <h6 class="nomreseñas">Armado en minutos</h6>
-            <p>Incluye todas las herramientas y un manual super facil para que la tengas lista sin vueltas</p>
-        </div>
-    
-</div>
-</div>
+            <div class="ventajas">
+                <img class="ven" src="multimedia/ventaja1.webp" alt="ventajas 1" width="100px">
+                <h6 class="nomreseñas">Cuida tu Postura</h6>
+                <p>Diseñadas ergonomicamente para alinear tu columna y eliminar los dolores al final del dia</p>
+            </div>
 
 
-<div class="loqueyoquiera">
-    <div class="carousel">
-    <div class="slides">
-        <div class="slide">
-            <img src="multimedia/carusel1.webp" >
-        </div>
+            <div class="ventajas">
+                <img class="ven" src="multimedia/ventaja2.webp" alt="ventajas 1" width="100px">
+                <h6 class="nomreseñas">Materiales Premium</h6>
+                <p>Estructuras reforzadas y mallas de alta resistencia que no se vencen con el uso diario</p>
+            </div>
 
-        <div class="slide">
-            <img src="multimedia/carusel2.jpg" >
-        </div>
 
-        <div class="slide">
-            <img src="multimedia/carusel3.jpg" >
+            <div class="ventajas">
+                <img class="ven" src="multimedia/ventaja3.webp" alt="ventajas 1" width="100px">
+                <h6 class="nomreseñas">Armado en minutos</h6>
+                <p>Incluye todas las herramientas y un manual super facil para que la tengas lista sin vueltas</p>
+            </div>
+
         </div>
     </div>
 
-    <button class="btn prev">❮</button>
-    <button class="btn next">❯</button>
-</div>
-</div>
+
+    <div class="loqueyoquiera">
+        <div class="carousel">
+            <div class="slides">
+                <div class="slide">
+                    <img src="multimedia/carusel1.webp">
+                </div>
+
+                <div class="slide">
+                    <img src="multimedia/carusel2.jpg">
+                </div>
+
+                <div class="slide">
+                    <img src="multimedia/carusel3.jpg">
+                </div>
+            </div>
+
+            <button class="btn prev">❮</button>
+            <button class="btn next">❯</button>
+        </div>
+    </div>
 
 
 
-<div  class="loqueyoquiera">
-    <!--TEXTO + IMG-->
-    <div class="textimg" id="sillaaa">
-        <div class="card-sillas">
-            <div class="card mb-3" style="max-width: 581px;">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img src="multimedia/silla1.png" class="img-fluid rounded-start" alt="Silla 1">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">Cronos Comfort</h5>
-                            <p class="card-text">¿Pasas horas sentado? Tu espalda necesita esto. Silla ergonómica de
-                                alto
-                                rendimiento con respaldo transpirable, reposacabezas ajustable y soporte lumbar
-                                integrado.
-                                Incluye una elegante base cromada y ajustes personalizados para un confort total durante
-                                todo el día.</p>
-                            <p class="card-text"><small class="text-body-secondary">Perfecta para: Home office intenso y
-                                    gaming.</small></p>
+    <div class="loqueyoquiera">
+        <!--TEXTO + IMG-->
+        <div class="textimg" id="sillaaa">
+            <div class="card-sillas">
+                <div class="card mb-3" style="max-width: 581px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="multimedia/silla1.png" class="img-fluid rounded-start" alt="Silla 1">
                         </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Cronos Comfort</h5>
+                                <p class="card-text">¿Pasas horas sentado? Tu espalda necesita esto. Silla ergonómica de
+                                    alto
+                                    rendimiento con respaldo transpirable, reposacabezas ajustable y soporte lumbar
+                                    integrado.
+                                    Incluye una elegante base cromada y ajustes personalizados para un confort total
+                                    durante
+                                    todo el día.</p>
+                                <p class="card-text"><small class="text-body-secondary">Perfecta para: Home office
+                                        intenso y
+                                        gaming.</small></p>
+                            </div>
 
-                    </div>
-                </div>
-                <button class="btn-comprar-123">
-                    ¡CONSIGUELA YA!
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<div class="loqueyoquiera">
-    <!--COSO CON EL CÓDIGO-->
-    <div class="codigo-caja">
-        <div class="col-md-8">
-            <div class="card mb-3" style="max-width: 581px;">
-                <div class="row g-0">
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">¡Apoya a tu creador favorito usando su código!</h5>
-                            <p class="card-text"><small class="text-body-secondary">Cada código da un descuento
-                                    diferente,
-                                    además de ayudar a tu creador de elección...</small></p>
-                            <label for="nombre">Código:</label>
-                            <input type="text" id="nombre" name="nombre" maxlength="6">
-
-                            <button class="btn-comprar">
-                                Enviar
-                            </button>
                         </div>
                     </div>
-
-                    <div class="col-md-4">
-                        <img src="multimedia/porcentaje imagen.webp" class="img-fluid rounded-start"
-                            alt="Porcentaje imagen">
-                    </div>
+                    <!-- data-producto define qué nombre aparece en el pop-up de compra -->
+                    <button class="btn-comprar-123" data-producto="Cronos Comfort">
+                        ¡CONSIGUELA YA!
+                    </button>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
 
-<div class="loqueyoquiera">
-    <!--RESEÑAS-->
-    <div class="reseñas-contenedor" id="reseña">
-        <div class="reseña">
-            <img class="pfp" src="multimedia/wachin1.jpg" alt="Reseña 1" width="100px">
-            <h6 class="nomreseñas">Valentín Carrazcal</h6>
-            <p>No mienten, es comodísima. El soporte para la cabeza y la espalda es de otro planeta. Vale totalmente la
-                pena.</p>
-            <img class="estrellas" src="multimedia/5estrellas.png" alt="estrellas" width="100px">
-        </div>
+    <div class="loqueyoquiera">
+        <!--RESEÑAS-->
+        <div class="reseñas-contenedor" id="reseña">
+            <div class="reseña">
+                <img class="pfp" src="multimedia/wachin1.jpg" alt="Reseña 1" width="100px">
+                <h6 class="nomreseñas">Valentín Carrazcal</h6>
+                <p>No mienten, es comodísima. El soporte para la cabeza y la espalda es de otro planeta. Vale totalmente
+                    la
+                    pena.</p>
+                <img class="estrellas" src="multimedia/5estrellas.png" alt="estrellas" width="100px">
+            </div>
 
-        <div class="reseña">
-            <img class="pfp" src="multimedia/wachin2.jpg" alt="Reseña 2" width="100px">
-            <h6 class="nomreseñas">Franco Frávega</h6>
-            <p>El asiento es un sueño, pero el manual de instrucciones apesta. Me tomó el doble de tiempo armarla. Un
-                sólido 8/10.</p>
-            <img class="estrellas" src="multimedia/4estrellas.png" alt="estrellas" width="100px">
-        </div>
+            <div class="reseña">
+                <img class="pfp" src="multimedia/wachin2.jpg" alt="Reseña 2" width="100px">
+                <h6 class="nomreseñas">Franco Frávega</h6>
+                <p>El asiento es un sueño, pero el manual de instrucciones apesta. Me tomó el doble de tiempo armarla.
+                    Un
+                    sólido 8/10.</p>
+                <img class="estrellas" src="multimedia/4estrellas.png" alt="estrellas" width="100px">
+            </div>
 
-        <div class="reseña">
-            <img class="pfp" src="multimedia/wachin3.jpg" alt="Reseña 3" width="100px">
-            <h6 class="nomreseñas">Bejamín Masía</h6>
-            <p>Súper ergonómica, materiales premium y se arma en 15 minutos. Es como sentarse en una nube. ¡10/10!</p>
-            <img class="estrellas" src="multimedia/5estrellas.png" alt="estrellas" width="100px">
-        </div>
-    </div>
-</div>
-
-
-<div class="loqueyoquiera">
-    <section class="faq" id="Preguntas">
-    <h2>Preguntas Frecuentes</h2>
-
-    <div class="faq-item">
-        <button class="faq-question">
-            ¿Las sillas ayudan a mejorar la postura?
-        </button>
-        <div class="faq-answer">
-            <p>Sí. Nuestras sillas están diseñadas para mantener una postura correcta y reducir la tensión en la espalda y el cuello.</p>
+            <div class="reseña">
+                <img class="pfp" src="multimedia/wachin3.jpg" alt="Reseña 3" width="100px">
+                <h6 class="nomreseñas">Bejamín Masía</h6>
+                <p>Súper ergonómica, materiales premium y se arma en 15 minutos. Es como sentarse en una nube. ¡10/10!
+                </p>
+                <img class="estrellas" src="multimedia/5estrellas.png" alt="estrellas" width="100px">
+            </div>
         </div>
     </div>
 
-    <div class="faq-item">
-        <button class="faq-question">
-            ¿Son ajustables?
-        </button>
-        <div class="faq-answer">
-            <p>La mayoría de nuestros modelos permiten ajustar altura, respaldo, apoyabrazos y soporte lumbar para adaptarse a cada usuario.</p>
-        </div>
-    </div>
 
-    <div class="faq-item">
-        <button class="faq-question">
-            ¿Cuánto tiempo dura la garantía?
-        </button>
-        <div class="faq-answer">
-            <p>Ofrecemos garantía de hasta 3 años contra defectos de fabricación, dependiendo del modelo adquirido.</p>
-        </div>
-    </div>
+    <div class="loqueyoquiera">
+        <section class="faq" id="Preguntas">
+            <h2>Preguntas Frecuentes</h2>
 
-    <div class="faq-item">
-        <button class="faq-question">
-            ¿Realizan envíos a todo el país?
-        </button>
-        <div class="faq-answer">
-            <p>Sí, contamos con envíos seguros y rápidos a todo el territorio nacional.</p>
-        </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    ¿Las sillas ayudan a mejorar la postura?
+                </button>
+                <div class="faq-answer">
+                    <p>Sí. Nuestras sillas están diseñadas para mantener una postura correcta y reducir la tensión en la
+                        espalda y el cuello.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    ¿Son ajustables?
+                </button>
+                <div class="faq-answer">
+                    <p>La mayoría de nuestros modelos permiten ajustar altura, respaldo, apoyabrazos y soporte lumbar
+                        para adaptarse a cada usuario.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    ¿Cuánto tiempo dura la garantía?
+                </button>
+                <div class="faq-answer">
+                    <p>Ofrecemos garantía de hasta 3 años contra defectos de fabricación, dependiendo del modelo
+                        adquirido.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    ¿Realizan envíos a todo el país?
+                </button>
+                <div class="faq-answer">
+                    <p>Sí, contamos con envíos seguros y rápidos a todo el territorio nacional.</p>
+                </div>
+            </div>
+        </section>
     </div>
-</section>
-</div>
 
 
 
@@ -322,50 +297,50 @@ const x = setInterval(function() {
 
 
 
-<script>
-document.addEventListener("DOMContentLoaded", () => {
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
 
-    const slides = document.querySelector(".slides");
-    const totalSlides = document.querySelectorAll(".slide").length;
+            const slides = document.querySelector(".slides");
+            const totalSlides = document.querySelectorAll(".slide").length;
 
-    let index = 0;
+            let index = 0;
 
-    function updateCarousel() {
-        slides.style.transform = `translateX(-${index * 100}%)`;
-    }
+            function updateCarousel() {
+                slides.style.transform = `translateX(-${index * 100}%)`;
+            }
 
-    document.querySelector(".next").addEventListener("click", () => {
-        index = (index + 1) % totalSlides;
-        updateCarousel();
-    });
+            document.querySelector(".next").addEventListener("click", () => {
+                index = (index + 1) % totalSlides;
+                updateCarousel();
+            });
 
-    document.querySelector(".prev").addEventListener("click", () => {
-        index = (index - 1 + totalSlides) % totalSlides;
-        updateCarousel();
-    });
+            document.querySelector(".prev").addEventListener("click", () => {
+                index = (index - 1 + totalSlides) % totalSlides;
+                updateCarousel();
+            });
 
-});
-
-
-
-
-const questions = document.querySelectorAll(".faq-question");
-
-questions.forEach(question => {
-    question.addEventListener("click", () => {
-        const answer = question.nextElementSibling;
-
-        if(answer.style.maxHeight){
-            answer.style.maxHeight = null;
-        } else {
-            answer.style.maxHeight = answer.scrollHeight + "px";
-        }
-    });
-});
+        });
 
 
 
-    const menuToggle = document.getElementById('menuToggle');
+
+        const questions = document.querySelectorAll(".faq-question");
+
+        questions.forEach(question => {
+            question.addEventListener("click", () => {
+                const answer = question.nextElementSibling;
+
+                if (answer.style.maxHeight) {
+                    answer.style.maxHeight = null;
+                } else {
+                    answer.style.maxHeight = answer.scrollHeight + "px";
+                }
+            });
+        });
+
+
+
+        const menuToggle = document.getElementById('menuToggle');
         const dropdownMenu = document.getElementById('dropdownMenu');
 
         menuToggle.addEventListener('click', () => {
@@ -394,16 +369,283 @@ questions.forEach(question => {
         });
 
 
-const elements = document.querySelectorAll('.loqueyoquiera');
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-    if (entry.isIntersecting) {
-    entry.target.classList.add('show');
-    }
-    });
-});
-elements.forEach(element => observer.observe(element));
-</script>
+        const elements = document.querySelectorAll('.loqueyoquiera');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+            });
+        });
+        elements.forEach(element => observer.observe(element));
+    </script>
+
+    <!--FORMULARIO DE COMPRA: GRACIAS CLAUDE-->
+    <div id="overlay-compra" class="popup-overlay" role="dialog" aria-modal="true" aria-labelledby="popup-titulo">
+
+        <div class="popup-caja">
+
+            <!-- Botón para cerrar el pop-up -->
+            <button class="popup-cerrar" id="btnCerrarPopup" aria-label="Cerrar">&times;</button>
+
+            <h3 id="popup-titulo" class="popup-titulo">Finalizar Compra</h3>
+
+            <!-- Nombre del producto seleccionado (se actualiza por JS) -->
+            <p class="popup-producto" id="popup-nombre-producto">Silla Ergonómica</p>
+
+            <!-- ---- SECCIÓN: CÓDIGO DE CREADOR ---- -->
+            <div class="popup-seccion">
+                <label class="popup-label" for="codigo-creador">Código de creador (opcional)</label>
+                <div class="popup-codigo-row">
+                    <input type="text" id="codigo-creador" class="popup-input" placeholder="Ej: JUANYT" maxlength="10">
+                    <!-- El botón aplica el código y muestra si es válido -->
+                    <button class="popup-btn-codigo" id="btnAplicarCodigo">Aplicar</button>
+                </div>
+                <!-- Mensaje que aparece debajo al aplicar el código -->
+                <p class="popup-msg-codigo" id="msg-codigo"></p>
+            </div>
+
+            <!-- ---- SECCIÓN: PRECIO ---- -->
+            <div class="popup-precio-caja">
+                <!-- Precio original tachado (solo visible con descuento) -->
+                <span class="popup-precio-original" id="precio-original"></span>
+                <!-- Precio final que siempre se muestra -->
+                <span class="popup-precio-final" id="precio-final">$85.000</span>
+                <!-- Badge de descuento (solo visible con descuento) -->
+                <span class="popup-badge-descuento" id="badge-descuento">-10%</span>
+            </div>
+
+            <!-- ---- SECCIÓN: DATOS DE ENVÍO ---- -->
+            <div class="popup-seccion">
+                <label class="popup-label" for="campo-ciudad">Ciudad</label>
+                <input type="text" id="campo-ciudad" class="popup-input" placeholder="Ej: Buenos Aires">
+
+                <label class="popup-label" for="campo-direccion">Dirección de envío</label>
+                <input type="text" id="campo-direccion" class="popup-input"
+                    placeholder="Ej: Av. Corrientes 1234, Piso 3">
+            </div>
+
+            <!-- ---- SECCIÓN: DATOS DE PAGO ---- -->
+            <div class="popup-seccion">
+                <label class="popup-label" for="campo-titular">Nombre del titular</label>
+                <input type="text" id="campo-titular" class="popup-input" placeholder="Como figura en la tarjeta">
+
+                <label class="popup-label" for="campo-tipo-tarjeta">Tipo de tarjeta</label>
+                <!-- Select con los tipos de tarjeta más comunes -->
+                <select id="campo-tipo-tarjeta" class="popup-input popup-select">
+                    <option value="">-- Seleccioná --</option>
+                    <option value="visa">Visa</option>
+                    <option value="mastercard">Mastercard</option>
+                    <option value="amex">American Express</option>
+                    <option value="naranja">Naranja X</option>
+                    <option value="cabal">Cabal</option>
+                </select>
+
+                <label class="popup-label" for="campo-numero">Número de tarjeta</label>
+                <!-- maxlength 19 para incluir espacios cada 4 dígitos -->
+                <input type="text" id="campo-numero" class="popup-input" placeholder="0000 0000 0000 0000"
+                    maxlength="19">
+
+                <div class="popup-fila-dos">
+                    <div>
+                        <label class="popup-label" for="campo-vencimiento">Vencimiento</label>
+                        <input type="text" id="campo-vencimiento" class="popup-input" placeholder="MM/AA" maxlength="5">
+                    </div>
+                    <div>
+                        <label class="popup-label" for="campo-cvv">Cód. de seguridad</label>
+                        <input type="text" id="campo-cvv" class="popup-input" placeholder="CVV" maxlength="4">
+                    </div>
+                </div>
+            </div>
+
+            <!-- ---- BOTÓN FINAL DE COMPRA ---- -->
+            <button class="popup-btn-comprar" id="btnConfirmarCompra">Confirmar compra</button>
+
+            <!-- Mensaje de éxito / error que aparece al enviar -->
+            <p class="popup-msg-resultado" id="msg-resultado"></p>
+
+        </div>
+    </div>
+    <!-- FIN POP-UP DE COMPRA -->
+
+
+    <div id="footer">
+        <p>© Landing Page</p>
+        <p>Contiene HTML, CSS y JavaScript</p>
+    </div>
+
+
+
+    <script>
+        // =============================================
+        // LÓGICA DEL POP-UP DE COMPRA
+        // =============================================
+
+        // --- Precio base de la silla (en pesos) ---
+        const PRECIO_BASE = 85000;
+
+        // --- Códigos de creador válidos (en minúsculas para comparar sin importar mayúsculas) ---
+        // Podés agregar tantos como quieras con el mismo formato
+        const CODIGOS_VALIDOS = ["juanyt", "marcos10", "sillasbro", "creador"];
+
+        // Estado interno del pop-up
+        let descuentoAplicado = false;  // true cuando el código fue validado
+        let productoActual = "";        // nombre de la silla que se quiere comprar
+
+        // --- Función que muestra el pop-up y carga el nombre del producto ---
+        function abrirPopup(nombreProducto) {
+            productoActual = nombreProducto;
+            document.getElementById("popup-nombre-producto").textContent = nombreProducto;
+
+            // Reiniciar descuento y campos cada vez que se abre
+            descuentoAplicado = false;
+            document.getElementById("codigo-creador").value = "";
+            document.getElementById("msg-codigo").textContent = "";
+            document.getElementById("badge-descuento").style.display = "none";
+            document.getElementById("precio-original").style.display = "none";
+            document.getElementById("precio-final").textContent = formatearPrecio(PRECIO_BASE);
+            document.getElementById("msg-resultado").textContent = "";
+
+            // Mostrar el overlay con animación (la clase "activo" lo hace visible)
+            document.getElementById("overlay-compra").classList.add("activo");
+            document.body.style.overflow = "hidden"; // Bloquea el scroll del fondo
+        }
+
+        // --- Función que cierra el pop-up ---
+        function cerrarPopup() {
+            document.getElementById("overlay-compra").classList.remove("activo");
+            document.body.style.overflow = ""; // Restaura el scroll
+        }
+
+        // --- Formatea número como precio en pesos: 85000 → "$85.000" ---
+        function formatearPrecio(numero) {
+            return "$" + numero.toLocaleString("es-AR");
+        }
+
+        // --- Cerrar al hacer click en la X ---
+        document.getElementById("btnCerrarPopup").addEventListener("click", cerrarPopup);
+
+        // --- Cerrar al hacer click fuera de la caja del pop-up (en el overlay oscuro) ---
+        document.getElementById("overlay-compra").addEventListener("click", function (e) {
+            if (e.target === this) cerrarPopup(); // Solo si se clickea el fondo, no la caja
+        });
+
+        // --- Cerrar con la tecla Escape ---
+        document.addEventListener("keydown", function (e) {
+            if (e.key === "Escape") cerrarPopup();
+        });
+
+        // --- Lógica del código de creador ---
+        document.getElementById("btnAplicarCodigo").addEventListener("click", function () {
+            const codigoIngresado = document.getElementById("codigo-creador").value.trim().toLowerCase();
+            const msgEl = document.getElementById("msg-codigo");
+
+            if (codigoIngresado === "") {
+                msgEl.textContent = "Ingresá un código primero.";
+                msgEl.style.color = "#c0392b";
+                return;
+            }
+
+            if (CODIGOS_VALIDOS.includes(codigoIngresado)) {
+                // Código válido: aplicar 10% de descuento
+                descuentoAplicado = true;
+                const precioConDescuento = Math.round(PRECIO_BASE * 0.9); // -10%
+
+                // Mostrar precio original tachado
+                document.getElementById("precio-original").textContent = formatearPrecio(PRECIO_BASE);
+                document.getElementById("precio-original").style.display = "inline";
+
+                // Actualizar precio final
+                document.getElementById("precio-final").textContent = formatearPrecio(precioConDescuento);
+
+                // Mostrar badge "-10%"
+                document.getElementById("badge-descuento").style.display = "inline";
+
+                msgEl.textContent = "✅ ¡Código aplicado! 10% de descuento.";
+                msgEl.style.color = "#27ae60";
+            } else {
+                // Código inválido
+                descuentoAplicado = false;
+                msgEl.textContent = "❌ Código inválido. Verificá que esté bien escrito.";
+                msgEl.style.color = "#c0392b";
+            }
+        });
+
+        // --- Formateo automático del número de tarjeta (agrega espacios cada 4 dígitos) ---
+        document.getElementById("campo-numero").addEventListener("input", function () {
+            let val = this.value.replace(/\D/g, ""); // Elimina todo lo que no es dígito
+            val = val.match(/.{1,4}/g)?.join(" ") || val; // Agrupa de 4 en 4
+            this.value = val;
+        });
+
+        // --- Formateo automático de vencimiento (agrega "/" después de MM) ---
+        document.getElementById("campo-vencimiento").addEventListener("input", function () {
+            let val = this.value.replace(/\D/g, "");
+            if (val.length >= 3) val = val.slice(0, 2) + "/" + val.slice(2, 4);
+            this.value = val;
+        });
+
+        // --- Validación y envío del formulario ---
+        document.getElementById("btnConfirmarCompra").addEventListener("click", function () {
+            const ciudad = document.getElementById("campo-ciudad").value.trim();
+            const direccion = document.getElementById("campo-direccion").value.trim();
+            const titular = document.getElementById("campo-titular").value.trim();
+            const tipoTarj = document.getElementById("campo-tipo-tarjeta").value;
+            const numero = document.getElementById("campo-numero").value.replace(/\s/g, ""); // sin espacios
+            const venc = document.getElementById("campo-vencimiento").value.trim();
+            const cvv = document.getElementById("campo-cvv").value.trim();
+            const msgRes = document.getElementById("msg-resultado");
+
+            // Validaciones básicas: todos los campos requeridos deben estar completos
+            if (!ciudad || !direccion || !titular || !tipoTarj || !numero || !venc || !cvv) {
+                msgRes.textContent = "⚠️ Por favor completá todos los campos.";
+                msgRes.style.color = "#c0392b";
+                return;
+            }
+
+            // Validación: número de tarjeta debe tener 16 dígitos
+            if (numero.length !== 16) {
+                msgRes.textContent = "⚠️ El número de tarjeta debe tener 16 dígitos.";
+                msgRes.style.color = "#c0392b";
+                return;
+            }
+
+            // Validación: CVV entre 3 y 4 dígitos
+            if (!/^\d{3,4}$/.test(cvv)) {
+                msgRes.textContent = "⚠️ El código de seguridad debe tener 3 o 4 dígitos.";
+                msgRes.style.color = "#c0392b";
+                return;
+            }
+
+            // Si todo está bien: mostrar confirmación
+            // En un sitio real acá iría el fetch() al backend de pagos
+            const precioFinal = document.getElementById("precio-final").textContent;
+            msgRes.textContent = `✅ ¡Pedido confirmado! Tu ${productoActual} llegará a ${ciudad}. Total: ${precioFinal}.`;
+            msgRes.style.color = "#27ae60";
+
+            // Deshabilitar el botón para evitar doble envío
+            this.disabled = true;
+            this.textContent = "Pedido enviado ✓";
+        });
+
+        // --- Conectar los botones "Comprar" de cada silla con el pop-up ---
+        // Recorremos todos los botones que tienen la clase "btn-comprar-123"
+        // y les asignamos el nombre del producto según el atributo data-producto
+        document.querySelectorAll(".btn-comprar-123").forEach(function (btn) {
+            btn.addEventListener("click", function () {
+                const nombreProducto = this.getAttribute("data-producto") || "Silla Ergonómica";
+                abrirPopup(nombreProducto);
+            });
+        });
+
+        // =============================================
+        // FIN LÓGICA POP-UP
+        // =============================================
+
+    </script>
+
+
+
 </body>
 
 </html>

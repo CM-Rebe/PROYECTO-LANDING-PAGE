@@ -6,7 +6,7 @@
 }
 
 body {
-    padding-top: 100px;
+    padding-top: 75px;
     background-color: var(--color-medio);
 }
 
@@ -37,13 +37,6 @@ body {
 
 .card {
     background-color: var(--color-claro);
-}
-
-.codigo-caja {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .row g-0{
@@ -193,7 +186,7 @@ body {
 
 .ventajas {
     width: 180px;
-    height: 334px;
+    height: fit-content;
     background-color: var(--color-claro);
     border-radius: 10px;
 
@@ -592,3 +585,264 @@ div {
         padding: 15px 0;
     }
 }
+
+
+
+
+
+/* =============================================
+   POP-UP DE COMPRA
+   ============================================= */
+ 
+/* Overlay oscuro que cubre toda la pantalla */
+.popup-overlay {
+    display: none;                  /* Oculto por defecto */
+    position: fixed;
+    inset: 0;                       /* top/right/bottom/left: 0 */
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    /* Animación de entrada del overlay */
+    animation: fadeInOverlay 0.25s ease;
+}
+ 
+/* Clase que activa el overlay (agregada por JS) */
+.popup-overlay.activo {
+    display: flex;
+}
+ 
+@keyframes fadeInOverlay {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+ 
+/* Caja blanca / card principal del pop-up */
+.popup-caja {
+    position: relative;
+    background-color: var(--color-claro);
+    border-radius: 14px;
+    padding: 28px 24px 24px;
+    width: 100%;
+    max-width: 440px;
+    max-height: 90vh;               /* Nunca supera el 90% de la pantalla */
+    overflow-y: auto;               /* Scroll interno si hay mucho contenido */
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+    /* Animación de entrada de la caja */
+    animation: slideUpPopup 0.3s ease;
+}
+ 
+@keyframes slideUpPopup {
+    from { transform: translateY(30px); opacity: 0; }
+    to   { transform: translateY(0);    opacity: 1; }
+}
+ 
+/* Botón X para cerrar */
+.popup-cerrar {
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    background: transparent;
+    border: none;
+    font-size: 1.6rem;
+    line-height: 1;
+    color: var(--color-oscuro);
+    cursor: pointer;
+    padding: 0 4px;
+    transition: transform 0.15s;
+}
+ 
+.popup-cerrar:hover {
+    transform: scale(1.2);
+}
+ 
+/* Título del pop-up */
+.popup-titulo {
+    color: var(--color-oscuro);
+    font-weight: 700;
+    margin-bottom: 4px;
+    font-size: 1.3rem;
+}
+ 
+/* Nombre del producto debajo del título */
+.popup-producto {
+    color: var(--color-detalles);
+    font-size: 0.95rem;
+    margin-bottom: 16px;
+    font-style: italic;
+}
+ 
+/* Cada bloque de campos (envío / pago / código) */
+.popup-seccion {
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+ 
+/* Etiqueta de cada campo */
+.popup-label {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--color-oscuro);
+    margin-top: 6px;
+}
+ 
+/* Input y select genéricos del pop-up */
+.popup-input {
+    width: 100%;
+    padding: 9px 12px;
+    border: 1.5px solid var(--color-medio);
+    border-radius: 7px;
+    font-size: 0.9rem;
+    background-color: #fff;
+    color: #333;
+    transition: border-color 0.2s;
+    box-sizing: border-box;
+}
+ 
+.popup-input:focus {
+    outline: none;
+    border-color: var(--color-oscuro);
+}
+ 
+/* Select: elimina el outline por defecto en algunos browsers */
+.popup-select {
+    cursor: pointer;
+    appearance: auto;
+}
+ 
+/* Fila de dos columnas (vencimiento + CVV) */
+.popup-fila-dos {
+    display: flex;
+    gap: 12px;
+}
+ 
+.popup-fila-dos > div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+ 
+/* Fila del código de creador: input + botón en línea */
+.popup-codigo-row {
+    display: flex;
+    gap: 8px;
+}
+ 
+.popup-codigo-row .popup-input {
+    flex: 1;
+}
+ 
+/* Botón "Aplicar" del código */
+.popup-btn-codigo {
+    padding: 9px 14px;
+    background-color: var(--color-detalles);
+    color: var(--color-claro);
+    border: none;
+    border-radius: 7px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background-color 0.2s;
+}
+ 
+.popup-btn-codigo:hover {
+    background-color: var(--color-oscuro);
+}
+ 
+/* Mensaje debajo del campo de código */
+.popup-msg-codigo {
+    font-size: 0.82rem;
+    min-height: 18px;
+    margin: 0;
+}
+ 
+/* Caja del precio */
+.popup-precio-caja {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 18px;
+    flex-wrap: wrap;
+}
+ 
+/* Precio original tachado (visible solo con descuento) */
+.popup-precio-original {
+    display: none;                  /* JS lo muestra cuando hay descuento */
+    text-decoration: line-through;
+    color: #999;
+    font-size: 1rem;
+}
+ 
+/* Precio final grande */
+.popup-precio-final {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--color-oscuro);
+}
+ 
+/* Badge "-10%" verde */
+.popup-badge-descuento {
+    display: none;                  /* JS lo muestra cuando hay descuento */
+    background-color: #27ae60;
+    color: #fff;
+    font-size: 0.78rem;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 20px;
+}
+ 
+/* Botón principal de confirmar compra */
+.popup-btn-comprar {
+    width: 100%;
+    padding: 13px;
+    background-color: var(--color-oscuro);
+    color: var(--color-claro);
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+    transition: transform 0.15s, background-color 0.2s;
+    margin-top: 4px;
+}
+ 
+.popup-btn-comprar:hover:not(:disabled) {
+    transform: scale(1.02);
+    background-color: var(--color-detalles);
+}
+ 
+.popup-btn-comprar:disabled {
+    opacity: 0.7;
+    cursor: default;
+}
+ 
+/* Mensaje de resultado (éxito o error) */
+.popup-msg-resultado {
+    text-align: center;
+    font-size: 0.88rem;
+    min-height: 20px;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+ 
+/* ---- Responsive: móvil chico ---- */
+@media (max-width: 480px) {
+    .popup-caja {
+        padding: 22px 16px 20px;
+    }
+ 
+    /* Apilar vencimiento y CVV en columna en pantallas muy chicas */
+    .popup-fila-dos {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+/* =============================================
+   FIN POP-UP DE COMPRA
+   ============================================= */
