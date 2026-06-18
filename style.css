@@ -843,6 +843,38 @@ div {
         gap: 0;
     }
 }
-/* =============================================
-   FIN POP-UP DE COMPRA
-   ============================================= */
+
+
+
+
+/* Flecha FAQ */
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-flecha {
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.faq-question.abierto .faq-flecha {
+    transform: rotate(180deg);
+}
+
+.titulos-caja {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.titulos {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    width: 600px;
+    margin-bottom: 30px;
+    background-color: var(--color-detalles);
+}

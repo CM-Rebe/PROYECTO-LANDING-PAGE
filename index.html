@@ -126,6 +126,14 @@
     </script>
 
     <div class="loqueyoquiera">
+
+        <div class="titulos-caja ">
+            <div class="titulos">
+                <h2>Ventajas</h2>
+            </div>
+        </div>
+
+
         <div class="ventajas-contenedor" id="ventajas">
 
             <div class="ventajas">
@@ -213,6 +221,12 @@
 
     <br>
 
+    <div class="titulos-caja ">
+            <div class="titulos">
+                <h2>Reseñas</h2>
+            </div>
+        </div>
+
     <div class="loqueyoquiera">
         <!--RESEÑAS-->
         <div class="reseñas-contenedor" id="reseña">
@@ -252,6 +266,7 @@
             <div class="faq-item">
                 <button class="faq-question">
                     ¿Las sillas ayudan a mejorar la postura?
+                    <span class="faq-flecha">▾</span>
                 </button>
                 <div class="faq-answer">
                     <p>Sí. Nuestras sillas están diseñadas para mantener una postura correcta y reducir la tensión en la
@@ -262,6 +277,7 @@
             <div class="faq-item">
                 <button class="faq-question">
                     ¿Son ajustables?
+                    <span class="faq-flecha">▾</span>
                 </button>
                 <div class="faq-answer">
                     <p>La mayoría de nuestros modelos permiten ajustar altura, respaldo, apoyabrazos y soporte lumbar
@@ -272,6 +288,7 @@
             <div class="faq-item">
                 <button class="faq-question">
                     ¿Cuánto tiempo dura la garantía?
+                    <span class="faq-flecha">▾</span>
                 </button>
                 <div class="faq-answer">
                     <p>Ofrecemos garantía de hasta 3 años contra defectos de fabricación, dependiendo del modelo
@@ -282,6 +299,7 @@
             <div class="faq-item">
                 <button class="faq-question">
                     ¿Realizan envíos a todo el país?
+                    <span class="faq-flecha">▾</span>
                 </button>
                 <div class="faq-answer">
                     <p>Sí, contamos con envíos seguros y rápidos a todo el territorio nacional.</p>
@@ -295,8 +313,9 @@
 
 
     <div id="footer">
+        <p>Puedes contactarnos en: <i>sillaspro.consultas@gmail.com</i></p>
         <p>© Landing Page</p>
-        <p>Contiene HTML, CSS y JavaScript</p>
+        <p>Contiene <i>HTML</i>, <i>CSS</i> y <i>JavaScript</i></p>
     </div>
 
 
@@ -343,6 +362,24 @@
         });
 
 
+        document.querySelectorAll(".faq-question").forEach(function (btn) {
+            btn.addEventListener("click", function () {
+                const answer = this.nextElementSibling;
+                const flecha = this.querySelector(".faq-flecha");
+
+                if (answer.classList.contains("abierto")) {
+                    answer.classList.remove("abierto");
+                    answer.style.maxHeight = "0px";
+                    flecha.textContent = "▾";
+                } else {
+                    answer.classList.add("abierto");
+                    answer.style.maxHeight = answer.scrollHeight + "px";
+                    flecha.textContent = "▴";
+                }
+            });
+        });
+
+
 
         const menuToggle = document.getElementById('menuToggle');
         const dropdownMenu = document.getElementById('dropdownMenu');
@@ -384,7 +421,7 @@
         elements.forEach(element => observer.observe(element));
     </script>
 
-    <!--FORMULARIO DE COMPRA: GRACIAS CLAUDE-->
+    <!--FORMULARIO DE COMPRA-->
     <div id="overlay-compra" class="popup-overlay" role="dialog" aria-modal="true" aria-labelledby="popup-titulo">
 
         <div class="popup-caja">
@@ -393,11 +430,9 @@
             <button class="popup-cerrar" id="btnCerrarPopup" aria-label="Cerrar">&times;</button>
 
             <h3 id="popup-titulo" class="popup-titulo">Finalizar Compra</h3>
-
-            <!-- Nombre del producto seleccionado (se actualiza por JS) -->
             <p class="popup-producto" id="popup-nombre-producto">Silla Ergonómica</p>
 
-            <!-- ---- SECCIÓN: CÓDIGO DE CREADOR ---- -->
+            <!-- SECCIÓN: CÓDIGO DE CREADOR -->
             <div class="popup-seccion">
                 <label class="popup-label" for="codigo-creador">Código de creador (opcional)</label>
                 <div class="popup-codigo-row">
@@ -409,7 +444,7 @@
                 <p class="popup-msg-codigo" id="msg-codigo"></p>
             </div>
 
-            <!-- ---- SECCIÓN: PRECIO ---- -->
+            <!-- SECCIÓN: PRECIO -->
             <div class="popup-precio-caja">
                 <!-- Precio original tachado (solo visible con descuento) -->
                 <span class="popup-precio-original" id="precio-original"></span>
@@ -419,7 +454,7 @@
                 <span class="popup-badge-descuento" id="badge-descuento">-10%</span>
             </div>
 
-            <!-- ---- SECCIÓN: DATOS DE ENVÍO ---- -->
+            <!-- SECCIÓN: DATOS DE ENVÍO  -->
             <div class="popup-seccion">
                 <label class="popup-label" for="campo-ciudad">Ciudad</label>
                 <input type="text" id="campo-ciudad" class="popup-input" placeholder="Ej: Buenos Aires">
@@ -427,9 +462,12 @@
                 <label class="popup-label" for="campo-direccion">Dirección de envío</label>
                 <input type="text" id="campo-direccion" class="popup-input"
                     placeholder="Ej: Av. Corrientes 1234, Piso 3">
+
+                <label class="popup-label" for="campo-mail">Dirección de correo electrónico</label>
+                <input type="text" id="campo-mail" class="popup-input" placeholder="sillaspro@gmail.com">
             </div>
 
-            <!-- ---- SECCIÓN: DATOS DE PAGO ---- -->
+            <!--  SECCIÓN: DATOS DE PAGO  -->
             <div class="popup-seccion">
                 <label class="popup-label" for="campo-titular">Nombre del titular</label>
                 <input type="text" id="campo-titular" class="popup-input" placeholder="Como figura en la tarjeta">
@@ -440,7 +478,6 @@
                     <option value="">-- Seleccioná --</option>
                     <option value="visa">Visa</option>
                     <option value="mastercard">Mastercard</option>
-                    <option value="amex">American Express</option>
                     <option value="naranja">Naranja X</option>
                     <option value="cabal">Cabal</option>
                 </select>
@@ -465,29 +502,24 @@
             <!-- ---- BOTÓN FINAL DE COMPRA ---- -->
             <button class="popup-btn-comprar" id="btnConfirmarCompra">Confirmar compra</button>
 
-            <!-- Mensaje de éxito / error que aparece al enviar -->
+            <!-- Mensaje de éxito o error que aparece al enviar -->
             <p class="popup-msg-resultado" id="msg-resultado"></p>
 
         </div>
     </div>
-    <!-- FIN POP-UP DE COMPRA -->
 
 
     <script>
-        // =============================================
-        // LÓGICA DEL POP-UP DE COMPRA
-        // =============================================
 
         // --- Precio base de la silla (en pesos) ---
         const PRECIO_BASE = 85000;
 
         // --- Códigos de creador válidos (en minúsculas para comparar sin importar mayúsculas) ---
-        // Podés agregar tantos como quieras con el mismo formato
-        const CODIGOS_VALIDOS = ["juanyt", "marcos10", "sillasbro", "creador"];
+        const CODIGOS_VALIDOS = ["juanyt", "teleinformatica", "sillaspro", "creador", "profeaprobanos"];
 
         // Estado interno del pop-up
-        let descuentoAplicado = false;  // true cuando el código fue validado
-        let productoActual = "";        // nombre de la silla que se quiere comprar
+        let descuentoAplicado = false;
+        let productoActual = "";
 
         // --- Función que muestra el pop-up y carga el nombre del producto ---
         function abrirPopup(nombreProducto) {
@@ -527,7 +559,6 @@
             if (e.target === this) cerrarPopup(); // Solo si se clickea el fondo, no la caja
         });
 
-        // --- Cerrar con la tecla Escape ---
         document.addEventListener("keydown", function (e) {
             if (e.key === "Escape") cerrarPopup();
         });
@@ -615,7 +646,6 @@
             }
 
             // Si todo está bien: mostrar confirmación
-            // En un sitio real acá iría el fetch() al backend de pagos
             const precioFinal = document.getElementById("precio-final").textContent;
             msgRes.textContent = `✅ ¡Pedido confirmado! Tu ${productoActual} llegará a ${ciudad}. Total: ${precioFinal}.`;
             msgRes.style.color = "#27ae60";
@@ -625,19 +655,12 @@
             this.textContent = "Pedido enviado ✓";
         });
 
-        // --- Conectar los botones "Comprar" de cada silla con el pop-up ---
-        // Recorremos todos los botones que tienen la clase "btn-comprar-123"
-        // y les asignamos el nombre del producto según el atributo data-producto
         document.querySelectorAll(".btn-comprar-123").forEach(function (btn) {
             btn.addEventListener("click", function () {
                 const nombreProducto = this.getAttribute("data-producto") || "Silla Ergonómica";
                 abrirPopup(nombreProducto);
             });
         });
-
-        // =============================================
-        // FIN LÓGICA POP-UP
-        // =============================================
 
     </script>
 
